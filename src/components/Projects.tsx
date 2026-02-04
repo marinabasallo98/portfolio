@@ -1,7 +1,3 @@
-import projectPortfolio from '../assets/proyecto_portfolio.jpg';
-import projectDubivo from '../assets/proyecto_dubivo.jpg';
-import projectHazas from '../assets/proyecto_hazas.jpg';
-
 function Projects() {
   return (
     <section id="projects" className="mt-5 p-10 space-y-8 max-w-6xl mx-auto scroll-mt-16" data-aos="fade-right">
