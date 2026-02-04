@@ -1,4 +1,4 @@
-import bgHero from '../assets/bg-hero.JPG'
+import bgHero from '../assets/bg-hero.jpg'
 
 function Home() {
   return (
