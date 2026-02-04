@@ -9,7 +9,7 @@ function Footer() {
 
       <nav className="flex gap-4">
         <a
-          href="https://www.linkedin.com/in/marina-fernandez-basallo/"
+          href="https://www.linkedin.com/in/marina-fernández-basallo/"
           target="_blank"
           rel="noopener noreferrer"
           aria-label="LinkedIn"
