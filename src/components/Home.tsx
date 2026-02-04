@@ -1,14 +1,9 @@
-import bgHero from '../assets/bg-hero.jpg'
-
 function Home() {
   return (
     <section id="home" data-aos="fade-up" className="scroll-mt-16">
       <div
         className="hero min-h-screen"
-        style={{
-          backgroundImage:
-            `url(${bgHero})`
-        }}
+        style={{ backgroundImage: "url('/bg-hero.jpg')" }}
       >
         <div className="hero-overlay bg-black/50"></div>
         <div className="hero-content text-neutral-content text-left items-start justify-start">
