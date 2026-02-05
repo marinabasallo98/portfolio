@@ -1,4 +1,39 @@
+import { useState } from 'react';
+
 function ContactMe() {
+  const [isSubmitted, setIsSubmitted] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsLoading(true);
+    
+    const form = e.target as HTMLFormElement;
+    
+    try {
+      // Enviar el formulario de forma tradicional
+      const formData = new FormData(form);
+      const response = await fetch(form.action, {
+        method: 'POST',
+        body: formData,
+        headers: {
+          'Accept': 'application/json'
+        }
+      });
+      
+      if (response.ok) {
+        setIsSubmitted(true);
+        setIsLoading(false);
+        form.reset(); // Limpiar el formulario
+        // Ocultar mensaje después de 5 segundos
+        setTimeout(() => setIsSubmitted(false), 5000);
+      }
+    } catch (error) {
+      console.error('Error:', error);
+      setIsLoading(false);
+    }
+  };
+
   return (
     <section
       id="contactMe"
@@ -11,12 +46,12 @@ function ContactMe() {
           className="flex flex-col gap-6"
           action="https://formsubmit.co/5bf3556433cea37c79c085b70ae6dd44"
           method="POST"
+          onSubmit={handleSubmit}
         >
           <input type="hidden" name="_subject" value="Nuevo mensaje desde Portfolio" />
           <input type="hidden" name="_captcha" value="false" />
-          <input type="hidden" name="_next" value="https://tudominio.com/gracias" />
-          
-          <input type="hidden" name="_autoresponse" value="¡Gracias por tu mensaje! Te responderé pronto." />
+          <input type="hidden" name="_next" value="#" />
+          <input type="hidden" name="_template" value="table" />
 
           <div className="form-control flex flex-col gap-2">
             <label className="label">
@@ -57,13 +92,33 @@ function ContactMe() {
             ></textarea>
           </div>
 
-          <div className="form-control mt-4">
+          <div className="form-control mt-4 space-y-4">
             <button
               type="submit"
               className="btn bg-orange-600 w-full hover:bg-orange-200 transition-colors duration-300 text-white"
+              disabled={isLoading}
             >
-              Enviar
+              {isLoading ? (
+                <>
+                  <span className="loading loading-spinner loading-sm"></span>
+                  Enviando...
+                </>
+              ) : (
+                'Enviar'
+              )}
             </button>
+
+            {isSubmitted && (
+              <div className="alert alert-success shadow-lg animate-fadeIn">
+                <svg xmlns="http://www.w3.org/2000/svg" className="stroke-current shrink-0 h-6 w-6" fill="none" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <h3 className="font-bold">¡Mensaje enviado!</h3>
+                  <div className="text-xs">Te responderé lo antes posible.</div>
+                </div>
+              </div>
+            )}
           </div>
         </form>
       </div>
@@ -92,7 +147,7 @@ function ContactMe() {
         </div>
       </div>
     </section>
-  )
+  );
 }
 
-export default ContactMe
+export default ContactMe;
