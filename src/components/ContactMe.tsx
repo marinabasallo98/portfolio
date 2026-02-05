@@ -7,7 +7,8 @@ function ContactMe() {
       <div className="card bg-base-100 flex-1 p-6">
         <h1 className="text-2xl font-bold mb-6 text-center">Formulario de Contacto</h1>
 
-        <form className="flex flex-col gap-6" name="contact" method="POST" data-netlify="true">
+        <form className="flex flex-col gap-6" name="contact" method="POST" data-netlify="true" action="/success.html">
+          <input type="hidden" name="form-name" value="contact" />
           <div className="form-control flex flex-col gap-2">
             <label className="label">
               <span className="label-text font-semibold">Email</span>
@@ -46,6 +47,8 @@ function ContactMe() {
               required
             ></textarea>
           </div>
+
+          <input type="hidden" name="bot-field" />
 
           <div className="form-control mt-4">
             <button
