@@ -9,18 +9,14 @@ function ContactMe() {
 
         <form
           className="flex flex-col gap-6"
-          name="contact"
+          action="https://formsubmit.co/marinabasallo98@gmail.com"
           method="POST"
-          data-netlify="true"
-          action="/?success=true"
-          data-netlify-honeypot="bot-field"
         >
-          <input type="hidden" name="form-name" value="contact" />
-          <input type="hidden" name="subject" value="Nuevo mensaje desde Portfolio" />
-
-          <p hidden>
-            <label>Don’t fill this out: <input name="bot-field" /></label>
-          </p>
+          <input type="hidden" name="_subject" value="Nuevo mensaje desde Portfolio" />
+          <input type="hidden" name="_captcha" value="false" />
+          <input type="hidden" name="_next" value="https://tudominio.com/gracias" />
+          
+          <input type="hidden" name="_autoresponse" value="¡Gracias por tu mensaje! Te responderé pronto." />
 
           <div className="form-control flex flex-col gap-2">
             <label className="label">
