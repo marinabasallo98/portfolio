@@ -1,25 +1,4 @@
 function ContactMe() {
-
-  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault()
-
-    const form = e.currentTarget
-    const data = new FormData(form)
-
-    try {
-      await fetch("/", {
-        method: "POST",
-        headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: new URLSearchParams(data as any).toString(),
-      })
-
-      form.reset()
-      alert("Mensaje enviado correctamente. Gracias por contactarme.")
-    } catch (error) {
-      alert("Ha ocurrido un error. Inténtalo de nuevo.")
-    }
-  }
-
   return (
     <section
       id="contactMe"
@@ -34,9 +13,13 @@ function ContactMe() {
           method="POST"
           data-netlify="true"
           data-netlify-honeypot="bot-field"
-          onSubmit={handleSubmit}
         >
           <input type="hidden" name="form-name" value="contact" />
+          <input type="hidden" name="subject" value="Nuevo mensaje desde Portfolio" />
+
+          <p hidden>
+            <label>Don’t fill this out: <input name="bot-field" /></label>
+          </p>
 
           <div className="form-control flex flex-col gap-2">
             <label className="label">
@@ -76,8 +59,6 @@ function ContactMe() {
               required
             ></textarea>
           </div>
-
-          <input type="hidden" name="bot-field" />
 
           <div className="form-control mt-4">
             <button
