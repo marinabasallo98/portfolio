@@ -1,4 +1,25 @@
 function ContactMe() {
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault()
+
+    const form = e.currentTarget
+    const data = new FormData(form)
+
+    try {
+      await fetch("/", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: new URLSearchParams(data as any).toString(),
+      })
+
+      form.reset()
+      alert("Mensaje enviado correctamente. Gracias por contactarme.")
+    } catch (error) {
+      alert("Ha ocurrido un error. Inténtalo de nuevo.")
+    }
+  }
+
   return (
     <section
       id="contactMe"
@@ -7,8 +28,16 @@ function ContactMe() {
       <div className="card bg-base-100 flex-1 p-6">
         <h1 className="text-2xl font-bold mb-6 text-center">Formulario de Contacto</h1>
 
-        <form className="flex flex-col gap-6" name="contact" method="POST" data-netlify="true">
+        <form
+          className="flex flex-col gap-6"
+          name="contact"
+          method="POST"
+          data-netlify="true"
+          data-netlify-honeypot="bot-field"
+          onSubmit={handleSubmit}
+        >
           <input type="hidden" name="form-name" value="contact" />
+
           <div className="form-control flex flex-col gap-2">
             <label className="label">
               <span className="label-text font-semibold">Email</span>
@@ -17,7 +46,7 @@ function ContactMe() {
               type="email"
               name="email"
               placeholder="mail@site.com"
-              className="input input-bordered"
+              className="input input-bordered h-10 border-gray-400 border-2 focus:border-orange-600 focus:ring-0 transition-colors duration-300"
               required
             />
             <span className="text-sm text-gray-500">Introduce un email válido</span>
@@ -31,7 +60,7 @@ function ContactMe() {
               type="text"
               name="name"
               placeholder="Escribe tu nombre"
-              className="input input-bordered"
+              className="input input-bordered h-10 border-gray-400 border-2 focus:border-orange-600 focus:ring-0 transition-colors duration-300"
               required
             />
           </div>
@@ -42,7 +71,7 @@ function ContactMe() {
             </label>
             <textarea
               name="message"
-              className="textarea textarea-bordered h-32"
+              className="textarea h-30 border-gray-400 border-2 focus:border-orange-600 focus:ring-0 transition-colors duration-300"
               placeholder="Escribe tu mensaje aquí"
               required
             ></textarea>
@@ -53,8 +82,9 @@ function ContactMe() {
           <div className="form-control mt-4">
             <button
               type="submit"
-              className="btn btn-primary w-full hover:bg-orange-600 transition-colors duration-300"
+              className="btn bg-orange-600 w-full hover:bg-orange-200 transition-colors duration-300 text-white"
             >
+              Enviar
             </button>
           </div>
         </form>
@@ -84,7 +114,7 @@ function ContactMe() {
         </div>
       </div>
     </section>
-  );
+  )
 }
 
-export default ContactMe;
+export default ContactMe
