@@ -9,7 +9,7 @@ function ContactMe() {
 
         <form
           className="flex flex-col gap-6"
-          action="https://formsubmit.co/marinabasallo98@gmail.com"
+          action="https://formsubmit.co/5bf3556433cea37c79c085b70ae6dd44"
           method="POST"
         >
           <input type="hidden" name="_subject" value="Nuevo mensaje desde Portfolio" />
