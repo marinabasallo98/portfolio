@@ -33,7 +33,7 @@ function Home() {
                 Ver mis proyectos
               </a>
               <a
-                href="/CV_FERNANDEZBASALLO_MARINA_2025_ESP.pdf" download
+                href="/CV_FERNANDEZBASALLO_MARINA_2026_ESP_PORTFOLIO.pdf" download
                 className="
     px-4 py-2
     rounded-s-sm
