@@ -1,6 +1,6 @@
-import proyectoPortfolio from "../assets/proyecto_portfolio.jpg";
-import proyectoDubivo from "../assets/proyecto_dubivo.jpg";
-import proyectoHazas from "../assets/proyecto_hazas.jpg";
+import proyectoPortfolio from "../assets/proyecto_portfolio.JPG";
+import proyectoDubivo from "../assets/proyecto_dubivo.JPG";
+import proyectoHazas from "../assets/proyecto_hazas.JPG";
 
 function Projects() {
   return (
