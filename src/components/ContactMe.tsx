@@ -61,7 +61,7 @@ function ContactMe() {
               type="email"
               name="email"
               placeholder="mail@site.com"
-              className="input input-bordered h-10 border-gray-400 border-2 focus:border-orange-600 focus:ring-0 transition-colors duration-300"
+              className="input input-bordered h-10 p-2 w-full border-gray-400 border focus:border-orange-600 focus:ring-0 transition-colors duration-300"
               required
             />
             <span className="text-sm text-gray-500">Introduce un email válido</span>
@@ -75,7 +75,7 @@ function ContactMe() {
               type="text"
               name="name"
               placeholder="Escribe tu nombre"
-              className="input input-bordered h-10 border-gray-400 border-2 focus:border-orange-600 focus:ring-0 transition-colors duration-300"
+              className="input input-bordered h-10 p-2 w-full border-gray-400 border focus:border-orange-600 focus:ring-0 transition-colors duration-300"
               required
             />
           </div>
@@ -86,7 +86,7 @@ function ContactMe() {
             </label>
             <textarea
               name="message"
-              className="textarea h-30 border-gray-400 border-2 focus:border-orange-600 focus:ring-0 transition-colors duration-300"
+              className="textarea h-30 p-2 w-full border-gray-400 border focus:border-orange-600 focus:ring-0 transition-colors duration-300"
               placeholder="Escribe tu mensaje aquí"
               required
             ></textarea>

@@ -7,9 +7,9 @@ function Home() {
       >
         <div className="hero-overlay bg-black/50"></div>
         <div className="hero-content text-neutral-content text-left items-start justify-start">
-          <div className="max-w-2xl lg:max-w-3xl text-left">
+          <div className="max-w-3xl lg:max-w-5xl text-left">
             <h1 className="mb-5 text-4xl md:text-5xl lg:text-6xl font-bold">
-              Hola, mi nombre es Marina.
+              Hola, mi nombre es Marina.<br />
               Soy desarrolladora web full-stack.</h1>
             <p className="mb-5 text-lg max-w-xl">
               Desarrollo aplicaciones web modernas con React, Laravel y Tailwind,
