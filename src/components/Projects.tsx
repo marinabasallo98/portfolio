@@ -1,3 +1,7 @@
+import proyectoPortfolio from "../assets/proyecto_portfolio.jpg";
+import proyectoDubivo from "../assets/proyecto_dubivo.jpg";
+import proyectoHazas from "../assets/proyecto_hazas.jpg";
+
 function Projects() {
   return (
     <section id="projects" className="mt-5 p-10 space-y-8 max-w-6xl mx-auto scroll-mt-16" data-aos="fade-right">
@@ -7,7 +11,7 @@ function Projects() {
       <a href="https://github.com/marinabasallo98/portfolio.git" className="group block flex flex-col lg:flex-row items-center bg-base-100 border border-transparent hover:border-accent transition-colors duration-300 overflow-hidden" data-aos="fade-left">
         <figure className="w-full lg:w-1/3 h-36 overflow-hidden">
           <img
-            src="/src/assets/proyecto_portfolio.jpg"
+            src={proyectoPortfolio}
             alt="Portfolio"
             className="w-full h-full object-cover" />
         </figure>
@@ -22,7 +26,7 @@ function Projects() {
       <a href="https://github.com/marinabasallo98/Dubivo_ProyectoFinal_MFB.git" className="group block flex flex-col lg:flex-row-reverse items-center bg-base-100 border border-transparent hover:border-secondary transition-colors duration-300 overflow-hidden" data-aos="fade-right">
         <figure className="w-full lg:w-1/3 h-36 overflow-hidden" >
           <img
-            src="/src/assets/proyecto_dubivo.jpg"
+            src={proyectoDubivo}
             alt="Dubivo"
             className="w-full h-full object-cover" />
         </figure>
@@ -37,7 +41,7 @@ function Projects() {
       <a href="#" className="group block flex flex-col lg:flex-row items-center bg-base-100 border border-transparent hover:border-accent transition-colors duration-300 overflow-hidden" data-aos="fade-left">
         <figure className="w-full lg:w-1/3 h-36 overflow-hidden">
           <img
-            src="/src/assets/proyecto_hazas.jpg"
+            src={proyectoHazas}
             alt="Hazas de la Suerte"
             className="w-full h-full object-cover" />
         </figure>
