@@ -7,7 +7,7 @@ function Projects() {
       <a href="https://github.com/marinabasallo98/portfolio.git" className="group block flex flex-col lg:flex-row items-center bg-base-100 border border-transparent hover:border-accent transition-colors duration-300 overflow-hidden" data-aos="fade-left">
         <figure className="w-full lg:w-1/3 h-36 overflow-hidden">
           <img
-            src="/src/assets/proyecto_portfolio.JPG"
+            src="/src/assets/proyecto_portfolio.jpg"
             alt="Portfolio"
             className="w-full h-full object-cover" />
         </figure>
@@ -22,7 +22,7 @@ function Projects() {
       <a href="https://github.com/marinabasallo98/Dubivo_ProyectoFinal_MFB.git" className="group block flex flex-col lg:flex-row-reverse items-center bg-base-100 border border-transparent hover:border-secondary transition-colors duration-300 overflow-hidden" data-aos="fade-right">
         <figure className="w-full lg:w-1/3 h-36 overflow-hidden" >
           <img
-            src="/src/assets/proyecto_dubivo.JPG"
+            src="/src/assets/proyecto_dubivo.jpg"
             alt="Dubivo"
             className="w-full h-full object-cover" />
         </figure>
@@ -37,7 +37,7 @@ function Projects() {
       <a href="#" className="group block flex flex-col lg:flex-row items-center bg-base-100 border border-transparent hover:border-accent transition-colors duration-300 overflow-hidden" data-aos="fade-left">
         <figure className="w-full lg:w-1/3 h-36 overflow-hidden">
           <img
-            src="/src/assets/proyecto_hazas.JPG"
+            src="/src/assets/proyecto_hazas.jpg"
             alt="Hazas de la Suerte"
             className="w-full h-full object-cover" />
         </figure>
